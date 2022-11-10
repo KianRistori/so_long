@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/10 16:28:52 by kristori          #+#    #+#             */
+/*   Updated: 2022/11/10 16:30:59 by kristori         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -7,31 +19,23 @@
 # include "libft/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
-// ----------------------------------
-// MACROS
 
 # ifndef ANIMATION_FRAMES
 #  define ANIMATION_FRAMES 10000
 # endif
 
-// ----------------------------------
-// STRUCTS
-
-/* vector with an x and y */
-typedef struct	s_vector
+typedef struct s_vector
 {
 	int	x;
 	int	y;
 }				t_vector;
 
-/* A pointer to the window and its size */
-typedef struct	s_window {
+typedef struct s_window {
 	void		*reference;
 	t_vector	size;
 }				t_window;
 
-/* all info needed for an image */
-typedef struct	s_image {
+typedef struct s_image {
 	void		*reference;
 	t_vector	size;
 	char		*pixels;
@@ -40,7 +44,7 @@ typedef struct	s_image {
 	int			endian;
 }				t_image;
 
-typedef struct	s_program {
+typedef struct s_program {
 	void		*mlx;
 	char		**map;
 	char		*map_path;
@@ -60,49 +64,45 @@ typedef struct	s_program {
 	t_vector	enemy_position;
 }				t_program;
 
-
-// ---------------------------------
-// FUNCTIONS
-
 t_window	ft_new_window(t_program *program, char *name);
 t_image		ft_new_sprite(void *mlx, char *path);
 
 int			ft_input(int key, void *program);
-int			ft_update (void *param);
+int			ft_update(void *param);
 
-void	ft_init(t_program *program, char *map_path);
+void		ft_init(t_program *program, char *map_path);
 void		ft_crete_map(t_program *program);
-void	ft_create_map2(t_program *program, int k, int i, t_vector *vector);
+void		ft_create_map2(t_program *program, int k, int i, t_vector *vector);
 void		ft_save_map(t_program *program);
-void	ft_hoocks_state(t_program *program);
-void	ft_hooks_if(t_program *program, int key);
-void	ft_update2(t_program *program);
+void		ft_hoocks_state(t_program *program);
+void		ft_hooks_if(t_program *program, int key);
+void		ft_update2(t_program *program);
 
-void	ft_sprite_position(t_program *program);
-void	ft_sprite_position2(t_program *program, int k, int i);
+void		ft_sprite_position(t_program *program);
+void		ft_sprite_position2(t_program *program, int k, int i);
 void		ft_count_lines(t_program *program);
 void		ft_count_object(t_program *program);
 
-char	*ft_concat(t_program *program);
-void	ft_take_object(t_program *program);
-void	ft_win(t_program *program);
-void	ft_lose(t_program *program);
-void	ft_spawn_enemy(t_program *program);
-void	ft_move_enemy(t_program *program);
-void	ft_free_sprite(t_program *program);
-void	ft_free_all(t_program *program);
+char		*ft_concat(t_program *program);
+void		ft_take_object(t_program *program);
+void		ft_win(t_program *program);
+void		ft_lose(t_program *program);
+void		ft_spawn_enemy(t_program *program);
+void		ft_move_enemy(t_program *program);
+void		ft_free_sprite(t_program *program);
+void		ft_free_all(t_program *program);
 
 void		ft_map_check(t_program *program);
-int		ft_map_check_contain(t_program *program);
-int		ft_map_check_walls(t_program *program);
-int		ft_map_check_walls_top_bottom(t_program *program);
-int		ft_map_check_walls_left_right(t_program *program);
-int		ft_map_check_rectangular(t_program *program);
-int		ft_map_check_contain_start(t_program *program);
-int		ft_map_check_contain_collectible(t_program *program);
-int		ft_map_check_contain_exit(t_program *program);
+int			ft_map_check_contain(t_program *program);
+int			ft_map_check_walls(t_program *program);
+int			ft_map_check_walls_top_bottom(t_program *program);
+int			ft_map_check_walls_left_right(t_program *program);
+int			ft_map_check_rectangular(t_program *program);
+int			ft_map_check_contain_start(t_program *program);
+int			ft_map_check_contain_collectible(t_program *program);
+int			ft_map_check_contain_exit(t_program *program);
 
-void	ft_exit(t_program *program, int key);
-int		ft_close();
+void		ft_exit(t_program *program, int key);
+int			ft_close(void);
 
 #endif
