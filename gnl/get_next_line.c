@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:13:35 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/04 13:16:44 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:28:07 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_get_line(char *save)
 	i = 0;
 	if (!save[i])
 		return (NULL);
-	ris = (char *)malloc(sizeof(char) * ft_strlen(save) + 1);
+	ris = (char *)malloc(sizeof(char) * (ft_strlen(save) + 1));
 	if (!ris)
 		return (NULL);
 	while (save[i] && save[i] != '\n')

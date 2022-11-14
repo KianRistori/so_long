@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:45:53 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 16:00:40 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:37:46 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ft_save_map(t_program *program)
 	k = 0;
 	fd = open(program->map_path, O_RDONLY);
 	line = "";
-	program->map = (char **)malloc(sizeof(char *) * program->n_lines + 1);
+	program->map = (char **)malloc(sizeof(char *) * (program->n_lines + 1));
 	if (!program->map)
 		return ;
 	while (line != NULL)
@@ -67,5 +67,22 @@ void	ft_save_map(t_program *program)
 		k++;
 	}
 	program->map[k] = 0;
+	ft_save_map2(program);
 	fd = close(fd);
+}
+
+void	ft_save_map2(t_program *program)
+{
+	int		k;
+
+	k = 0;
+	program->map2 = (char **)malloc(sizeof(char *) * (program->n_lines + 1));
+	if (!program->map2)
+		return ;
+	while (program->map[k])
+	{
+		program->map2[k] = ft_strdup(program->map[k]);
+		k++;
+	}
+	program->map2[k] = 0;
 }

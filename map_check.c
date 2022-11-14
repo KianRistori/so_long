@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:38:07 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 15:51:28 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 12:39:31 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_map_check(t_program *program)
 {
 	if (ft_map_check_walls(program) == 1
 		|| ft_map_check_contain(program) == 1
-		|| ft_map_check_rectangular(program) == 1)
+		|| ft_map_check_rectangular(program) == 1
+		|| ft_map_check_path(program) == 1)
 	{
 		ft_free_all(program);
 		ft_close();

@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:28:52 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 16:30:59 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:07:16 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,13 @@ typedef struct s_image {
 typedef struct s_program {
 	void		*mlx;
 	char		**map;
+	char		**map2;
 	char		*map_path;
-	char		*display;
 	int			n_lines;
 	int			n_moves;
 	int			n_object;
 	int			state;
+	int			cmap;
 	t_window	window;
 	t_image		sprite;
 	t_image		object;
@@ -74,6 +75,7 @@ void		ft_init(t_program *program, char *map_path);
 void		ft_crete_map(t_program *program);
 void		ft_create_map2(t_program *program, int k, int i, t_vector *vector);
 void		ft_save_map(t_program *program);
+void		ft_save_map2(t_program *program);
 void		ft_hoocks_state(t_program *program);
 void		ft_hooks_if(t_program *program, int key);
 void		ft_update2(t_program *program);
@@ -101,6 +103,8 @@ int			ft_map_check_rectangular(t_program *program);
 int			ft_map_check_contain_start(t_program *program);
 int			ft_map_check_contain_collectible(t_program *program);
 int			ft_map_check_contain_exit(t_program *program);
+int			ft_map_check_path(t_program *program);
+int			ft_map_check_path1(t_program *program);
 
 void		ft_exit(t_program *program, int key);
 int			ft_close(void);

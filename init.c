@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:47:16 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 15:14:13 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:07:11 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_init(t_program *program, char *map_path)
 	program->exit = ft_new_sprite(program->mlx, "img/exit.xpm");
 	program->enemy = ft_new_sprite(program->mlx, "img/enemy.xpm");
 	program->n_moves = 0;
-	program->display = "Total Moves ";
 	program->n_object = 0;
 	program->state = 1;
+	program->cmap = 0;
 }

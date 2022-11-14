@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:35:09 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 13:48:59 by kristori         ###   ########.fr       */
+/*   Created: 2022/11/11 11:33:35 by kristori          #+#    #+#             */
+/*   Updated: 2022/11/11 11:47:12 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "../gnl/get_next_line.h"
-# include "../ft_printf/ft_printf.h"
+char	*ft_strdup(char *s)
+{
+	char	*ris;
+	int		i;
 
-char	*ft_itoa(int n);
-char	*ft_strcpy(char *dest, char *src);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_strdup(char *s);
-
-#endif
+	i = 0;
+	ris = (char *)malloc(ft_strlen(s) * (sizeof(char) + 1));
+	if (!ris)
+		return (ris);
+	while (s[i])
+	{
+		ris[i] = s[i];
+		i++;
+	}
+	ris[i] = '\0';
+	return (ris);
+}

@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:03:32 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 15:16:51 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:49:16 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,16 @@ void	ft_move_enemy(t_program *program)
 	int		x;
 
 	x = rand() % 4;
-	if (program->state == 1)
-	{
-		if (program->map[program->enemy_position.y / 40]
-			[(program->enemy_position.x / 40) + 1] != '1' && x == 0)
-			program->enemy_position.x += 40;
-		else if (program->map[program->enemy_position.y / 40]
-			[(program->enemy_position.x / 40) - 1] != '1' && x == 1)
-			program->enemy_position.x -= 40;
-		else if (program->map[(program->enemy_position.y / 40) + 1]
-			[program->enemy_position.x / 40] != '1' && x == 2)
-			program->enemy_position.y += 40;
-		else if (program->map[(program->sprite_position.y / 40) - 1]
-			[program->sprite_position.x / 40] != '1' && x == 3)
-			program->enemy_position.y -= 40;
-	}
+	if (x == 0 && program->map[program->enemy_position.y / 40]
+		[(program->enemy_position.x / 40) + 1] != '1')
+		program->enemy_position.x += program->enemy.size.x;
+	else if (x == 1 && program->map[program->enemy_position.y / 40]
+		[(program->enemy_position.x / 40) - 1] != '1')
+		program->enemy_position.x -= program->enemy.size.x;
+	else if (x == 2 && program->map[(program->enemy_position.y / 40 + 1)]
+		[program->enemy_position.x / 40] != '1')
+		program->enemy_position.y += program->enemy.size.y;
+	else if (x == 3 && program->map[(program->enemy_position.y / 40 - 1)]
+		[program->enemy_position.x / 40] != '1')
+		program->enemy_position.y -= program->enemy.size.y;
 }

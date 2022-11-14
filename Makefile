@@ -1,12 +1,12 @@
 NAME = so_long.out
-SRC = main.c map.c image.c hooks.c window.c init.c enemy.c destroy.c count.c utils.c map_check.c map_check_contain.c map_create.c
+SRC = main.c map.c image.c hooks.c window.c init.c enemy.c destroy.c count.c utils.c map_check.c map_check_contain.c map_create.c map_check_path.c
 OBJ = $(SRC:.c=.o)
 
 MLX = @mlx/Makefile.gen
 PRINTF = @ft_printf/Makefile
 LIBFT = @libft/Makefile
 GNL = @gnl/Makefile
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 LIB = mlx/libmlx_Linux.a mlx/libmlx.a libft/libft.a ft_printf/libftprintf.a gnl/gnl.a
 LINKS = -Lmlx_linux -Imlx_linux -lXext -lX11 -lm -lz
 

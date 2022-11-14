@@ -6,13 +6,13 @@
 #    By: kristori <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 12:54:12 by kristori          #+#    #+#              #
-#    Updated: 2022/11/09 12:23:27 by kristori         ###   ########.fr        #
+#    Updated: 2022/11/11 11:35:48 by kristori         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
-SRC	= ft_itoa.c  ft_strcpy.c  ft_strcat.c
+SRC	= ft_itoa.c  ft_strcpy.c  ft_strcat.c ft_strdup.c
 
 OBJ	= $(SRC:.c=.o)
 

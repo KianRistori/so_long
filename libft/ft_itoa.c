@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 10:21:31 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/10 16:02:36 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:12:33 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ char	*ft_itoa(int nbr)
 	int		len;
 
 	len = ft_intlen(nbr);
-	ris = (char *)malloc(sizeof(char) * (len + 1));
-	ris[len] = '\0';
-	if (nbr < 0)
-		ris[0] = '-';
-	else if (nbr == 0)
+	ris = (char *)malloc(sizeof(char) * len + 1);
+	if (!ris)
+		return (NULL);
+	if (nbr == 0)
 		ris[0] = '0';
+	ris[len] = '\0';
 	while (nbr != 0)
 	{
-		len--;
-		ris[len] = ft_absolute_value(nbr % 10) + '0';
+		ris[len - 1] = ft_absolute_value(nbr % 10) + '0';
 		nbr = nbr / 10;
+		len--;
 	}
 	return (ris);
 }
