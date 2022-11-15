@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:31:34 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 16:31:07 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:25:32 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void	ft_count_lines(t_program *program)
 
 	fd = open(program->map_path, O_RDONLY);
 	line = "";
-	program->n_lines = 0;
 	while (line != NULL)
 	{
 		line = get_next_line(fd);
 		program->n_lines++;
+		free(line);
 	}
+	fd = close(fd);
 }
 
 void	ft_count_object(t_program *program)

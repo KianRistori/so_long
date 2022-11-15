@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:55:01 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 16:32:05 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:23:32 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_concat(t_program *program)
 	num = ft_itoa(program->n_moves);
 	ris = (char *)malloc(sizeof(char)
 			* (ft_strlen(display) + ft_strlen(num) + 1));
+	if (!ris)
+		return (NULL);
 	ft_strcpy(ris, display);
 	ft_strcat(ris, num);
 	free(num);

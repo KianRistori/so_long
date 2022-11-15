@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:45:45 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 15:19:23 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:23:54 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,11 @@ void	ft_update2(t_program *program)
 	mlx_put_image_to_window(program->mlx, program->window.reference,
 		program->enemy.reference, program->enemy_position.x,
 		program->enemy_position.y);
+	program->display_moves = ft_concat(program);
 	mlx_string_put(program->mlx, program->window.reference,
 		program->window.size.x / 2,
-		program->window.size.y - 5, 100000, ft_concat(program));
+		program->window.size.y - 5, 100000, program->display_moves);
+	free(program->display_moves);
 }
 
 void	ft_hooks_if(t_program *program, int key)

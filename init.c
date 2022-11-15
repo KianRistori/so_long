@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:47:16 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 15:07:11 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:23:44 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_init(t_program *program, char *map_path)
 {
 	program->map_path = map_path;
+	program->n_lines = 0;
 	program->sprite = ft_new_sprite(program->mlx, "img/player.xpm");
 	program->object = ft_new_sprite(program->mlx, "img/key.xpm");
 	program->ground = ft_new_sprite(program->mlx, "img/ground.xpm");

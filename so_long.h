@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:28:52 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 15:07:16 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:23:35 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_program {
 	char		**map;
 	char		**map2;
 	char		*map_path;
+	char		*display_moves;
 	int			n_lines;
 	int			n_moves;
 	int			n_object;
