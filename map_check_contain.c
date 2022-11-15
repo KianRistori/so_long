@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:26:30 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/11 11:19:43 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:12:43 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_map_check_contain(t_program *program)
 		&& ft_map_check_contain_collectible(program) == 0
 		&& ft_map_check_contain_exit(program) == 1)
 		return (0);
-	ft_printf("%s\n" "Error\nMap not contain essential value\n");
+	ft_printf("Error\nMap not contain essential value\n");
 	return (1);
 }
 

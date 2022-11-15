@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:38:07 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 12:39:31 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:12:28 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_map_check(t_program *program)
 		|| ft_map_check_rectangular(program) == 1
 		|| ft_map_check_path(program) == 1)
 	{
-		ft_free_all(program);
 		ft_close();
 	}
 	return ;
@@ -42,7 +41,7 @@ int	ft_map_check_walls_top_bottom(t_program *program)
 	{
 		if (program->map[0][i] != '1')
 		{
-			ft_printf("%s\n" "Error\nMap not closed by walls\n");
+			ft_printf("Error\nMap not closed by walls\n");
 			return (1);
 		}
 		i++;
@@ -52,7 +51,7 @@ int	ft_map_check_walls_top_bottom(t_program *program)
 	{
 		if (program->map[program->n_lines - 2][i] != '1')
 		{
-			ft_printf("%s\n" "Error\nMap not closed by walls\n");
+			ft_printf("Error\nMap not closed by walls\n");
 			return (1);
 		}
 		i++;
@@ -70,7 +69,7 @@ int	ft_map_check_walls_left_right(t_program *program)
 		if (program->map[i][0] != '1'
 			|| program->map[i][ft_strlen(program->map[i]) - 2] != '1')
 		{
-			ft_printf("%s\n" "Error \nMap not closed by walls\n");
+			ft_printf("Error \nMap not closed by walls\n");
 			return (1);
 		}
 		i--;
@@ -85,6 +84,6 @@ int	ft_map_check_rectangular(t_program *program)
 	k = ft_strlen(program->map[0]);
 	if (program->n_lines < k)
 		return (0);
-	ft_printf("%s\n" "Error\nMap not rectangular");
+	ft_printf("Error\nMap not rectangular");
 	return (1);
 }

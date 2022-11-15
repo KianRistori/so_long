@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:28:52 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/15 12:23:35 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:59:03 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include "ft_printf/ft_printf.h"
 # include "libft/libft.h"
 # include <fcntl.h>
-# include <stdio.h>
 
 # ifndef ANIMATION_FRAMES
 #  define ANIMATION_FRAMES 10000

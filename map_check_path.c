@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:17:27 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/14 12:46:56 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:11:47 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,17 @@ int	ft_map_check_path(t_program *program)
 	ft_map_check_path1(program);
 	if (program->cmap == 1)
 		return (0);
-	ft_printf("%s\n" "Error\nMap not have valid path\n");
+	ft_printf("Error\nMap not have valid path\n");
 	return (1);
 }
 
 static int	ft_map_check_path2(t_program *program, int y, int x)
 {
-	if (program->cmap == 0)
-	{
+
 		if (program->map2[y][x] == 'E')
 		{
 			program->cmap = 1;
-			return (0);
+			return (1);
 		}
 		program->map2[y][x] = '1';
 		if (program->map2[y][x + 1] != '1')
@@ -39,8 +38,7 @@ static int	ft_map_check_path2(t_program *program, int y, int x)
 			ft_map_check_path2(program, (y + 1), x);
 		if (program->map2[y - 1][x] != '1')
 			ft_map_check_path2(program, (y - 1), x);
-	}
-	return (0);
+		return (0);
 }
 
 int	ft_map_check_path1(t_program *program)
