@@ -6,7 +6,7 @@
 /*   By: kristori <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:45:45 by kristori          #+#    #+#             */
-/*   Updated: 2022/11/15 12:23:54 by kristori         ###   ########.fr       */
+/*   Updated: 2022/11/16 12:14:58 by kristori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,12 @@ int	ft_update(void *param)
 	if (frame == ANIMATION_FRAMES)
 	{
 		program->sprite_position.y += 1;
+		program->enemy_position.y += 1;
 	}
 	else if (frame >= ANIMATION_FRAMES * 2)
 	{
 		program->sprite_position.y -= 1;
+		program->enemy_position.y -= 1;
 		frame = 0;
 	}
 	if (program->state == 1)
