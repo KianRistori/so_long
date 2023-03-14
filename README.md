@@ -9,7 +9,7 @@
 `so long` will help you improve your skills in the following areas: window management,
 event handling, colors, textures, and so forth.
 
-You are going to use the school graphical library: the MiniLibX! This library was
+You are going to use the school graphical library: the **MiniLibX!** This library was
 developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events.
 
 The other goals are similar to every other goal for this first year: being rigorous, level
@@ -19,7 +19,7 @@ up in `C` programming, use basic algorithms, do some information research, and s
 
 | Program name | Arguments             | External functs                                                                                                                                                                                                                     | Description                                                                                                                                                                                            |
 |:------------:|:---------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| so_long      | A map in format *.ber | • open, close, read, write, malloc, free, perror, strerror, exit<br/<br/>• All functions of the math library (-lm compiler option, man man 3 math)<br/>• All functions of the MiniLibX<br/>• ft_printf and any equivalent YOU coded | You must create a basic 2D game in which a dolphin escapes Earth after eating some fish. Instead of a dolphin, fish, and the Earth, you can use any character, any collectible and any place you want. |
+| so_long      | A map in format *.ber | • open, close, read, write, malloc, free, perror, strerror, exit<br/>• All functions of the math library (-lm compiler option, man man 3 math)<br/>• All functions of the MiniLibX<br/>• ft_printf and any equivalent YOU coded | You must create a basic 2D game in which a dolphin escapes Earth after eating some fish. Instead of a dolphin, fish, and the Earth, you can use any character, any collectible and any place you want. |
 
 Your project must comply with the following rules
 
