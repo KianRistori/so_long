@@ -126,6 +126,17 @@ You will get extra points if you:
 
 ## My so_long
 
-<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long2_rxgsta.png" title="" alt="so_long1" data-align="left">
+<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678789952/42/so_long/so_long_video_ecmxan.gif" title="" alt="so_long1" data-align="left">
 
 ![so_long2](https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long1_fwcm6f.png)
+
+### How start
+
+In the directory, type the command `make`, when the make is complete type this command
+
+```bash
+./so_long.out map.ber
+```
+
+You can use any map you want or create you a new follow the up role.
+
