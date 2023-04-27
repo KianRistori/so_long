@@ -9,7 +9,7 @@
 `so long` will help you improve your skills in the following areas: window management,
 event handling, colors, textures, and so forth.
 
-You are going to use the school graphical library: the **MiniLibX!** This library was
+You are going to use the school graphical library: the MiniLibX! This library was
 developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events.
 
 The other goals are similar to every other goal for this first year: being rigorous, level
@@ -17,9 +17,13 @@ up in `C` programming, use basic algorithms, do some information research, and s
 
 ## Mandatory part
 
-| Program name | Arguments             | External functs                                                                                                                                                                                                                     | Description                                                                                                                                                                                            |
-|:------------:|:---------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| so_long      | A map in format *.ber | • open, close, read, write, malloc, free, perror, strerror, exit<br/>• All functions of the math library (-lm compiler option, man man 3 math)<br/>• All functions of the MiniLibX<br/>• ft_printf and any equivalent YOU coded | You must create a basic 2D game in which a dolphin escapes Earth after eating some fish. Instead of a dolphin, fish, and the Earth, you can use any character, any collectible and any place you want. |
+| Program name         | so_long                                                                                                                                                                                                                     |
+|:-------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Turn in files**    | Makefile, *.h, *.c, maps, textures                                                                                                                                                                                          |
+| **Arguments**        | A map in format *.ber                                                                                                                                                                                                       |
+| **External functs.** | open, close, read, write, malloc, free, perror, strerror, exit<br/<br/>All functions of the math library (-lm compiler option, man man 3 math)<br/>All functions of the MiniLibX<br/>ft_printf and any equivalent YOU coded |
+| **Libft authorized** | Yes                                                                                                                                                                                                                         |
+| **Description**      | You must create a basic 2D game in which a dolphin escapes Earth after eating some fish. Instead of a dolphin, fish, and the Earth, you can use any character, any collectible and any place you want.                      |
 
 Your project must comply with the following rules
 
@@ -79,7 +83,7 @@ Your project must comply with the following rules
 
 - Here is a simple valid map:
   
-  ```
+  ```md
   1111111111111
   10010000000C1
   1000011111001
@@ -101,7 +105,7 @@ Your project must comply with the following rules
 
 - Another example of a minimal `.ber` map:
   
-  ```
+  ```md
   1111111111111111111111111111111111
   1E0000000000000C00000C000000000001
   1010010100100000101001000000010101
@@ -126,17 +130,6 @@ You will get extra points if you:
 
 ## My so_long
 
-<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678789952/42/so_long/so_long_video_ecmxan.gif" title="" alt="so_long1" data-align="left">
+<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long2_rxgsta.png" title="" alt="so_long1" data-align="left">
 
 ![so_long2](https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long1_fwcm6f.png)
-
-### How start
-
-In the directory, type the command `make`, when the make is complete type this command
-
-```bash
-./so_long.out map.ber
-```
-
-You can use any map you want or create you a new follow the up role.
-
