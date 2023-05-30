@@ -8,6 +8,8 @@
 
 ![so_long2](https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long1_fwcm6f.png)
 
+### To start
+
 ```bash
 make && ./so_long.out map.ber
 ```
