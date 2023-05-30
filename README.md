@@ -2,6 +2,16 @@
 
 > It’s time for you to create a basic computer graphics project!
 
+## My so_long
+
+<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long2_rxgsta.png" title="" alt="so_long1" data-align="left">
+
+![so_long2](https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long1_fwcm6f.png)
+
+```bash
+make && ./so_long.out map.ber
+```
+
 ## Score
 
 <img width="200px" src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678097637/42/125_100_wonrhe.png" />
@@ -127,9 +137,3 @@ You will get extra points if you:
 - Add some sprite animation.
 
 - Display the movement count directly on screen instead of writing it in the shell.
-
-## My so_long
-
-<img src="https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long2_rxgsta.png" title="" alt="so_long1" data-align="left">
-
-![so_long2](https://res.cloudinary.com/dk8lnfjpm/image/upload/v1678788560/42/so_long/so_long1_fwcm6f.png)
